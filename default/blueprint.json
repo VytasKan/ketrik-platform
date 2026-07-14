@@ -1,5 +1,5 @@
 {
-	"tenantId": "ketrik-web",
+	"tenantId": "ketrik-default",
 	"version": "1.0.0",
 	"stores": {
 		"global": {
