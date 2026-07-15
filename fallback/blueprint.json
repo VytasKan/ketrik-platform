@@ -5,7 +5,7 @@
 		"global": {
 			"strategy": "FETCH",
 			"options": {
-				"url": "/api/files/globals.json"
+				"url": "/_configs/globals.json"
 			}
 		},
 
