@@ -1,5 +1,5 @@
 "use client";
-import { dynamic } from "@repo/ui";
+import { dynamic } from "@repo/ui/elements/dynamic";
 import {
 	AreaChart,
 	BarChart3,
