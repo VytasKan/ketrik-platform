@@ -1,28 +1,11 @@
 "use client";
 import { dynamic } from "@repo/ui/elements/dynamic";
-import {
-	AreaChart,
-	BarChart3,
-	Bot,
-	Boxes,
-	CheckSquare,
-	Code2,
-	FileCode,
-	Image,
-	Layers,
-	LayoutDashboard,
-	LineChart,
-	List,
-	MessageSquare,
-	MousePointerClick,
-	Table,
-} from "@repo/ui-icons/lucide";
+ 
 
 export const COMPONENTS = {
 	Marketing: dynamic(() => import("@repo/marketing")),
 
-	Icons: dynamic(() => import("@repo/features/icons")),
-
+ 
 	LWYieldChart: dynamic(() => import("@repo/lw-charts/yield-curve-chart")),
 	LWOptionsChart: dynamic(() => import("@repo/lw-charts/options-chart")),
 	TWWidget: dynamic(() => import("@repo/lw-charts/widget")),
@@ -43,21 +26,7 @@ export const COMPONENTS = {
 	DataForm: dynamic(() => import("@repo/forms"))
 };
 export const ICONS = {
-	LayoutDashboard,
-	LineChart,
-	Table,
-	CheckSquare,
-	MousePointerClick,
-	Image,
-	List,
-	AreaChart,
-	MessageSquare,
-	Bot,
-	Code2,
-	FileCode,
-	Layers,
-	Boxes,
-	BarChart3,
+	 
 };
 
 export const registry = {
