@@ -7,6 +7,7 @@ import { LWChartDemo } from "@repo/lw-charts/demo";
 import { MuiChartsDemo } from "@repo/mui-charts/demo";
 import { PlotlyDemo } from "@repo/plotly/demo";
 import { RechartDemo } from "@repo/recharts/demo";
+import { ApexChartsDemo } from "@repo/apex-charts/demo";
 
 export const COMPONENTS = {
 	Marketing: dynamic(() => import("@repo/marketing")),
@@ -21,8 +22,12 @@ export const COMPONENTS = {
 	Muichart: dynamic(() => import("@repo/mui-charts")),
 	GoogleChart: dynamic(() => import("@repo/google-charts")),
 	Chartjs: dynamic(() => import("@repo/chartjs")),
+	ApexContent: dynamic(() => import("@repo/apex-charts/apex-content")),
+	ApexContentStreaming: dynamic(() => import("@repo/apex-charts/apex-content-streaming")),
 
 	Chatbot: dynamic(() => import("@repo/chatbot/chat")),
+	KnowledgeChatbot: dynamic(() => import("@repo/chatbot/knowledge-chat")),
+	KnowledgeChat: dynamic(() => import("@repo/chatbot/knowledge-chat")),
 	Chat: dynamic(() => import("@repo/chat")),
 	JsonViewer: dynamic(() => import("@repo/jsonviewer/JsonViewerContent")),
 	MonacoEditor: dynamic(() => import("@repo/monaco")),
@@ -34,6 +39,7 @@ export const COMPONENTS = {
 export const ICONS = {};
 
 export const CHART_DEMOS = {
+	ApexChartsDemo,
 	GoogleChartDemo,
 	ChartjsDemo,
 	MuiChartsDemo,
