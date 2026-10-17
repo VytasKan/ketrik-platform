@@ -4,7 +4,7 @@ export const COMPONENTS = {
 	LWYieldChart: () => import("@repo/lw-charts/yield-curve-chart"),
 	LWOptionsChart: () => import("@repo/lw-charts/options-chart"),
 	TWWidget: () => import("@repo/lw-charts/widget"),
-	LWChart: () => import("@repo/lw-charts/chart"),
+	LWChart: () => import("@repo/lw-charts"),
 
 	Plotly: () => import("@repo/plotly"),
 	Rechart: () => import("@repo/recharts"),
