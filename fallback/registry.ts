@@ -1,55 +1,34 @@
-"use client";
-import { dynamic } from "@repo/ui/elements/dynamic";
-
-import { ChartjsDemo } from "@repo/chartjs/demo";
-import { GoogleChartDemo } from "@repo/google-charts/demo";
-import { LWChartDemo } from "@repo/lw-charts/demo";
-import { MuiChartsDemo } from "@repo/mui-charts/demo";
-import { PlotlyDemo } from "@repo/plotly/demo";
-import { RechartDemo } from "@repo/recharts/demo";
-import { ApexChartsDemo } from "@repo/apex-charts/demo";
-
 export const COMPONENTS = {
-	Marketing: dynamic(() => import("@repo/marketing")),
+	Marketing: () => import("@repo/marketing"),
 
-	LWYieldChart: dynamic(() => import("@repo/lw-charts/yield-curve-chart")),
-	LWOptionsChart: dynamic(() => import("@repo/lw-charts/options-chart")),
-	TWWidget: dynamic(() => import("@repo/lw-charts/widget")),
-	LWChart: dynamic(() => import("@repo/lw-charts/chart")),
+	LWYieldChart: () => import("@repo/lw-charts/yield-curve-chart"),
+	LWOptionsChart: () => import("@repo/lw-charts/options-chart"),
+	TWWidget: () => import("@repo/lw-charts/widget"),
+	LWChart: () => import("@repo/lw-charts/chart"),
 
-	Plotly: dynamic(() => import("@repo/plotly")),
-	Rechart: dynamic(() => import("@repo/recharts")),
-	Muichart: dynamic(() => import("@repo/mui-charts")),
-	GoogleChart: dynamic(() => import("@repo/google-charts")),
-	Chartjs: dynamic(() => import("@repo/chartjs")),
-	ApexContent: dynamic(() => import("@repo/apex-charts/apex-content")),
-	ApexContentStreaming: dynamic(() => import("@repo/apex-charts/apex-content-streaming")),
+	Plotly: () => import("@repo/plotly"),
+	Rechart: () => import("@repo/recharts"),
+	Muichart: () => import("@repo/mui-charts"),
+	GoogleChart: () => import("@repo/google-charts"),
+	Chartjs: () => import("@repo/chartjs"),
 
-	Chatbot: dynamic(() => import("@repo/chatbot/chat")),
-	KnowledgeChatbot: dynamic(() => import("@repo/chatbot/knowledge-chat")),
-	KnowledgeChat: dynamic(() => import("@repo/chatbot/knowledge-chat")),
-	Chat: dynamic(() => import("@repo/chat")),
-	JsonViewer: dynamic(() => import("@repo/jsonviewer/JsonViewerContent")),
-	MonacoEditor: dynamic(() => import("@repo/monaco")),
+	ApexChart: () => import("@repo/apex-charts"),
+	ApexChartStreaming: () => import("@repo/apex-charts/apex-content-streaming"),
 
-	NotificationToolbarAction: dynamic(() => import("@repo/notifications")),
-	DataForm: dynamic(() => import("@repo/forms")),
+	Chatbot: () => import("@repo/chatbot/chat"),
+	KnowledgeChatbot: () => import("@repo/chatbot/knowledge-chat"),
+	KnowledgeChat: () => import("@repo/chatbot/knowledge-chat"),
+	Chat: () => import("@repo/chat"),
+	JsonViewer: () => import("@repo/jsonviewer/JsonViewerContent"),
+	MonacoEditor: () => import("@repo/monaco"),
+
+	NotificationToolbarAction: () => import("@repo/notifications"),
+	DataForm: () => import("@repo/forms"),
 };
 
 export const ICONS = {};
 
-export const CHART_DEMOS = {
-	ApexChartsDemo,
-	GoogleChartDemo,
-	ChartjsDemo,
-	MuiChartsDemo,
-	RechartDemo,
-	LWChartDemo,
-	PlotlyDemo,
-};
-
 export const registry = {
 	components: COMPONENTS,
 	icons: ICONS,
-	chartDemos: CHART_DEMOS,
 };
