@@ -26,6 +26,35 @@ export const COMPONENTS = {
 	DataForm: () => import("@repo/forms"),
 };
 
+
+export const APIs = {
+	connections: () => import("@repo/service-connections/api"),
+	//chat: () => import("@repo/chatbot/api"),
+};
+
+export const API = [
+	{
+		path: "connections/:path*",
+		handler: () => import("@repo/service-connections/api"),
+	},
+	{
+		path: "chat/:slug*",
+		access: { level: "authenticated", methods: ["POST"] },
+		handler: () => import("@repo/chatbot").then((m) => m.api.handleRequest as any),
+	},
+	{
+		path: "mcp/:transport*",
+		access: { level: "authenticated", methods: ["GET", "POST", "DELETE"] },
+		handler: async () => {
+			const { createMcpHttpHandler } = await import("@repo/mcp/http");
+			const { createKetrikMcpServer } = await import("@repo/mcp/core");
+			const mcpHandler = createMcpHttpHandler({ server: () => createKetrikMcpServer() });
+			return ({ request }: any) => mcpHandler(request);
+		},
+	},
+
+
+
 export const ICONS = {};
 
 export const registry = {
