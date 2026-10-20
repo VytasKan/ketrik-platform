@@ -26,12 +26,6 @@ export const COMPONENTS = {
 	DataForm: () => import("@repo/forms"),
 };
 
-export const API = {
-	connections: () => import("@repo/service-connections/api"),
-	chat: () => import("@repo/chatbot/api"),
-	mcp: () => import("@repo/mcp/api"),
-};
-
 export const ICONS = {};
 
 export const registry = {
