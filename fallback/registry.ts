@@ -53,7 +53,7 @@ export const API = [
 		},
 	},
 
-]
+];
 
 export const ICONS = {};
 
