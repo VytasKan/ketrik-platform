@@ -24,6 +24,15 @@ export const COMPONENTS = {
 
 	NotificationToolbarAction: () => import("@repo/notifications"),
 	DataForm: () => import("@repo/forms"),
+
+	KetrikAgent: () => import("./modules/ketrik-agent"),
+	KetrikAgentic: () => import("./modules/ketrik-agentic6"),
+	KetrikAgentic2: () => import("./modules/ketrik-agentic-status"),
+	KetrikDiagram: () => import("./modules/ketrik-diagram"),
+	KetrikFaq: () => import("./modules/ketrik-faq"),
+	KetrikMiniFaq: () => import("./modules/ketrik-mini-faq"),
+	KetrikSocial: () => import("./modules/ketrik-social-bar"),
+	KetrikSimulation: () => import("./modules/ketrik-simulations"),
 };
 
 export const ICONS = {};
